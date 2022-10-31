@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ktunaxa Interactive</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('./images/Polson_downtown.jpg');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("./images/Polson_downtown.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("./images/Polson_downtown.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-blue w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <p style="color :white; ">
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small">ABOUT THE PROJECT</a>
+    <a href="#game" class="w3-bar-item w3-button w3-hide-small">THE GAME</a>
+    <a href="#pedagogy" class="w3-bar-item w3-button w3-hide-small">PEDAGOGY</a>
+    <a href="#principles" class="w3-bar-item w3-button w3-hide-small">PRINCIPLES</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small">ȻI·KATIN! (Look at it!)</a>
+    <a href="#stickers" class="w3-bar-item w3-button w3-hide-small">LANGUAGE STICKERS</a>
+    <a href="#team" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i>TEAM</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+      </p>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium">
+    <p style="color :white; ">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT THE PROJECT</a>
+    <a href="#game" class="w3-bar-item w3-button" onclick="toggleFunction()">THE GAME</a>
+    <a href="#pedagoy" class="w3-bar-item w3-button" onclick="toggleFunction()">PEDAGOGY</a>
+    <a href="#principles" class="w3-bar-item w3-button" onclick="toggleFunction()">PRINCIPLES</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">ȻI·KATIN! (Look at it!)</a>
+    <a href="#stickers" class="w3-bar-item w3-button" onclick="toggleFunction()">LANGUAGE STICKERS</a>
+    <a href="#team" class="w3-bar-item w3-button" onclick="toggleFunction()">TEAM</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+      </p>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<!-- <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-animate-opacity">Kin wam?! Glad you made it!<span class="w3-hide-small"></span></span>
+  </div>
+</div> -->
+
+<!-- First Parallax Image with Logo Text in the same style as the Portfolio text below -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-xxlarge w3-padding-large w3-black w3-text-white w3-xlarge w3-wide w3-animate-opacity">Kin wam? Glad you made it!</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">Welcome to the Ktunaxa Interactive Language Learning project!</h3>
+  <br>
+  <!-- <p class="w3-center"><em>ABOUT THE PROJECT</em></p> -->
+  <p> This is a Ksanka-led project with the goal to develop the first interactive language learning adventure game for Ktunaxa. to support independent learners
+
+
+
+    The team works with the approval of the Tribal Council of the Confederated Salish and Kootenai Tribes, and consults with fluent speakers and teachers of the Ktunaxa language for their advice on the language and cultural content that gets implemented in the game.
+    The team was awarded a Native Voices Endowment grant from the <a href="https://www.endangeredlanguagefund.org/">Endangered Language Fund</a> twice, once in 2020, and again in 2022.<br><br>
+    We believe in the benfits of game-based learning where learners get to apply language content in simulated conversations and contexts with real-world relevance. Rather than just memorizing word lists, learners can practice words and phrases in context, but also in a safe space, where errors are allowed, and in their own time.
+    The game motivates players with a fun mission to solve, and offers cultural guidance alongside the language practice. Audio is integrated for Ktunaxa words and phrases, and the game provides feedback on learners' conversational choices in the game.<br><br>
+    <em>WE CARE ABOUT EDUCATIONAL SOVEREIGNTY FOR THE COMMUNITY, SUSTAINABILITY OF TOOLS & LEARNING MATERIALS, AND AGENCY FOR LEARNERS! AND FUN!</em><br><br></p>
+</div>
+
+
+<!-- Second Parallax Image with Game Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="game">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">THE GAME</span>
+  </div>
+</div>
+
+<!-- Container (Pedagogy Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">HOW THE GAME WORKS</h3>
+  <br>
+  <p class="w3-center">
+  <p>
+    This is how the game works. Access the game here.
+  </p>
+</div>
+
+
+
+<!-- Second Parallax Image with Pedagogy Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="pedagogy">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PEDAGOGY</span>
+  </div>
+</div>
+
+<!-- Container (Pedagogy Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">THE PEDAGOGY BEHIND THE GAME</h3>
+  <br>
+  <p class="w3-center">
+  <p>
+
+    Pedagogy: contextualised content; focus on everyday language skills; game-based learning; learning-while-designing; audio & visual supports, scaffolded immersion (once a concept or term is introduced in Ktunaxa, it will stay in Ktunaxa from then one)
+
+    Our mission is to make learning Ktunaxa fun, easy, and engaging, especially for young learners. At the same time we are concerned with the accuracy of the language content we provide (everything gets vetted by the Elders Meeting, the Tribal Council, and our advisors before we offer it to learners), and the safety of language and cultural information.
+    This game is intended to support the Ktunaxa community, and we aim to work exclusively with open-source software that can easily be updated and maintained to ensure that all sovereignty over the language materials and any cultural content remains with the community (and does not get locked into an app). We strongly advocate for capacity-building throughout the community, and
+    the ELF has asked the team to consider a training program to educate community members about the tools and processes used in making this game, so that in the future they can make any updates themselves, and enhance the game, add more chapters, etc.
+
+    Principles: co-design, technological sustainablity, pedagogical sovereignty, learner agency, verified content, community-led project
+  </p>
+</div>
+
+  <!-- Third Parallax Image with Principles Text -->
+  <div class="bgimg-2 w3-display-container w3-opacity-min" id="principles">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">PRINCIPLES</span>
+    </div>
+  </div>
+
+  <!-- Container (Principles Section) -->
+  <div class="w3-content w3-container w3-padding-64">
+    <h3 class="w3-center">PROJECT PRINCIPLES</h3>
+    <br>
+    <p class="w3-center">
+    <p>
+      Principles: co-design, technological sustainablity, pedagogical sovereignty, learner agency, verified content, community-led project
+    </p>
+</div>
+
+<div class="w3-row w3-center w3-blue w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">EDUCATIONAL SOVEREIGNTY</span><br>
+    The commmunity owns all language & culture materials
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">SUSTAINABILITY</span><br>
+    Open-source software & capacity-building
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">LEARNER AGENCY</span><br>
+    Practice in your own time
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">FUN</span><br>
+    Game-based learning for more engagement
+  </div>
+</div>
+
+
+
+<!-- Fourth Parallax Image with Look at it Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">ȻI·KATIN! Take a look!</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center" color="blue">WHAT WE'VE BEEN WORKING ON...</h3>
+  <p class="w3-center"><em>Here are some of our newest additions for the game. Ȼi·katin! (literally: Look at it!)<br> Click on the images to make them bigger</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+    </div>
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Second Parallax Image with Pedagogy Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="stickers">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">STICKERS!</span>
+  </div>
+</div>
+
+<!-- Container (Pedagogy Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">KTUNAXA LANGUAGE STICKERS</h3>
+  <br>
+  <p class="w3-center">
+  <p>
+    The graphics of the game inspired us to design a series of Ktunaxa language stickers. Ȼi·katin!
+    <br>
+    <br>
+    Here is our bumper sticker.
+    <br>
+    <em>Hu susaxi. I'm on my way.</em>
+  </p>
+  <br>
+  <div>
+    <img src="./images/bumper_sticker.png" style="width:25%" onclick="onClick(this)" class="w3-hover-opacity" alt="Ktunaxa bumper sticker. 'Hu susaxi' means 'I'm on my way.'">
+  </div>
+  <br>
+  <p>
+    Do you know the advertising slogan "Got milk?". Here is our Ktunaxa version.
+    <br>
+    <em>Kin h'at kⱡuk̓muʾⱡ? Got frybread? (Literally: Do you have frybread?)</em>
+  </p>
+  <br>
+  <div>
+    <img src="./images/frybread_sticker.png" style="width:25%" onclick="onClick(this)" class="w3-hover-opacity" alt="Ktunaxa language sticker. 'Kin h'at kⱡuk̓muʾⱡ?' literally means 'Do you have frybread?">
+  </div>
+  <br>
+  <p>
+    You'd like a sticker, or you have a great ideas for a sticker design? <a href="#contact">Get in touch!</a>
+  </p>
+</div>
+
+<!-- Fifth Parallax Image with Team Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="team">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">TEAM</span>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">WHO WE ARE</h3>
+</div>
+<div class="w3-row">
+  <div class="w3-col m6 w3-center w3-padding-large">
+    <!-- <p><b><i class="fa fa-user w3-margin-right"></i>OUR TEAM</b></p><br> -->
+    <img src='./images/team.png') class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Team picture" width="50%" height="50%">
+  </div>
+
+  <div class="w3-padding-large">
+    <p>
+      The team is a colorful mix of members from the Ksanka band of the Ktunaxa tribe and their affiliates. Meet Ksanka language teacher Randell, social activist & burlesque artist Kayla, social worker & storyteller Liz, law student & boxing coach Bryan, Spokane artist & illustrator Rich, German language instruction designer Kathrin, and graphics interface designer Andrew from California.
+      <br>
+      <br>
+      A core team of four first came together in 2019 over a shared passion for creative learning methods. Since then they have been meeting online on a weekly basis. Three more active members joined meanwhile, and we are actively recruiting and welcoming more members to the group.
+      <br>
+      <br>
+      If you'd like to get involved, <a href="#contact">get in touch!</a>
+      <br>
+      We'd love to hear from you!
+    </p>
+  </div>
+</div>
+
+  <!-- Hide this text on small devices -->
+  <!-- <div class="w3-col m6 w3-hide-small w3-padding-large">
+    <p>We are a colorful group with members from the Ksanka band of the Ktunaxa tribe, a language activist, a social activist & burlesque artist, a storyteller & social worker, a law student & boxing coach, and a Spokane artist & illustrator, a German language instruction designer, and a graphics interface designer from Oregon. Initially, a core team of 4 first came together in 2019 over a shared passion for creative learning methods, and since then they have been meeting online on a weekly basis. 3 more members joined meanwhile, and we are actively recruiting and welcoming more members to the group.</p>
+  </div>
+</div> -->
+
+<!-- <p class="w3-large w3-center w3-padding-16">Principles</p>
+<p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+<div class="w3-light-grey">
+  <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+</div>
+<p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+<div class="w3-light-grey">
+  <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+</div>
+<p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+<div class="w3-light-grey">
+  <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+</div>
+</div> -->
+
+<!-- Fifth Parallax Image with Contact Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="contact">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">THIS IS WHERE WE WORK</h3>
+  <p class="w3-center"><em>We'd love to hear from you!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="./images/ksanka_placenames_map.png" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> k̓upawiȼq̓nuk <em>(Elmo, MT)<br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> niskati <em>(Ronan, MT)</em><br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> kwat̓aq̓nuk <em>(Polson, MT)</em><br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> tuhuⱡnana <em>(Missoula, MT)</em><br>
+
+        <!-- <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br> -->
+      </div>
+      <p>If you'd like to get involved, share feedback, or meet us for a cup of ka·pi <i class="fa fa-coffee"></i>, leave us a note:</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
