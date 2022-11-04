@@ -51,6 +51,23 @@ body, html {
     min-height: 400px;
   }
 }
+
+
+{
+    box-sizing: border-box;
+}
+/* Set additional styling options for the columns*/
+.column {
+float: left;
+width: 25%;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
 </style>
 </head>
 <body>
@@ -169,8 +186,11 @@ body, html {
     <br><br><br><br><br><br>
     <ul>
       <li>Talk with other characters in the game to learn about the place, make friends, and pick up language skills.</li>
+      <br>
       <li>Unlock new words and phrases on your way.</li>
+      <br>
       <li>Make decisions about what to say, where to go, and what to do. (<em>Score respect points for culturally appropriate choices!</em>)</li>
+      <br>
       <li>Solve mini-puzzles to unlock new paths and important knowledge (<em>and practice your language skills in the process!</em>).</li>
     </ul>
     <br>
@@ -257,7 +277,7 @@ body, html {
   </div>
 
   <div class="w3-row w3-center w3-blue w3-padding-16">
-    <div class="w3-quarter w3-section">
+    <div class="w3-quarter w3-section" style="padding-right:16">
       <span class="w3-xlarge">CO-DESIGN</span><br>
       The project team consists of Ktunaxa community members and their non-Ktunaxa colleagues who all bring different kinds of expertise to this project, e.g. story-telling, arts & design, instructional design, youth advocacy, tech implementation etc.
       We meet regularly once per week and share the decision-making for all aspects of this project, including the curriculum design, story and game development, governance, engagement with learners and project promotion, etc.
