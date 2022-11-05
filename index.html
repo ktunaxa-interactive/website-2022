@@ -85,12 +85,18 @@ body, html {
 }
 
 .column {
-float: left;
 display: table-cell;
+width: 25%;
 padding-top: 50px;
 padding-right: 30px;
 padding-bottom: 50px;
 padding-left: 30px;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
 }
 
 .row {
@@ -102,11 +108,7 @@ padding-bottom: 50px;
 padding-left: 30px;
 }
 
-/* .row:after {
-content: "";
-display: table;
-clear: both;
-} */
+
 
 </style>
 </head>
@@ -349,28 +351,28 @@ clear: both;
 </div>
 
 <div class="column-container">
-  <div class="column" style="display: table-cell; height: table; width: 25%; background-color:DodgerBlue; color:white;">
+  <div class="column" style="background-color:DodgerBlue; color:white; padding-left: 30px;">
     <h3>CO-DESIGN</h3><br>
     <p>The project team consists of Ktunaxa community members and their non-Ktunaxa colleagues who all bring different kinds of expertise to this project,
         e.g. story-telling, arts & design, instructional design, youth advocacy, tech implementation etc. We meet regularly once per week and share the decision-making for all aspects of this project,
         including the curriculum design, story and game development, governance, engagement with learners and project promotion, etc.
     </p>
   </div>
-  <div class="column" style="display: table-cell; height: table; width: 25%; background-color:DodgerBlue; color:white;">
+  <div class="column" style="background-color:DodgerBlue; color:white;">
     <h3>COMMUNITY OWNERSHIP</h3><br>
     <p>All language content and cultural heritage that we implement in the game is owned by the Ktunaxa language community. It is only made available to Ktunaxa
         language learners for educational purposes. We work closely with the Elders Meeting in Elmo, and the Tribal Council of the Confederated Salish and Kootenai
         Tribes to make sure the content is correct and appropriate, and can be shared with Ktunaxa language learners in the context of this game.
     </p>
   </div>
-  <div class="column" style="display: table-cell; height: table; width: 25%; background-color:DodgerBlue; color:white;">
-    <h3>SUSTAINABLE LEARNING RESOURCES</h3><br>
+  <div class="column" style="background-color:DodgerBlue; color:white;">
+    <h3>SUSTAINABLE RESOURCES</h3><br>
     <p>The project relies on accessible open source / free software and basic formats that are long-lived to make sure the game is sustainable.
     The project team trains their capacity to work with these tools to make updates to the content and add further chapters to the game independently.
     We offer community-oriented workshops to introduce the tools and workflows. Reach out if you are interested in learning more!
     </p>
   </div>
-  <div class="column" style="display: table-cell; height: table; width: 25%; background-color:DodgerBlue; color:white;">
+  <div class="column" style="background-color:DodgerBlue; color:white;">
     <h3>EMPOWERING LEARNERS</h3><br>
     <p>The project emphasises the learner perspective, and we aim to implement features to help learners be in charge of their own learning process,
     such as practice mechanisms with integrated feedback, keeping track of learned content, grammatical information on demand, and a motivating learning experience
