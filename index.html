@@ -16,37 +16,58 @@ body, html {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6  {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* First image (Logo. Full height) */
+/* First image (Welcome. Full height) */
 .bgimg-1 {
   background-image: url('./images/background_image_welcome_tent.png');
   min-height: 100%;
 }
 
-/* Second image (Portfolio) */
+/* Second image (goals)*/
 .bgimg-2 {
   background-image: url("./images/Polson_downtown.jpg");
   min-height: 400px;
 }
 
-/* Third image (Contact) */
+/* Third image (the game) */
 .bgimg-3 {
-  background-image: url("./images/Polson_downtown.jpg");
+  background-image: url("./images/auntie_house_2.jpg");
   min-height: 400px;
 }
+
+/* Fourth image (pedagogy) */
+.bgimg-4 {
+  background-image: url("./images/frybread_with_parfleche.png");
+  min-height: 400px;
+}
+
+/* Fifth image (principles) */
+.bgimg-5 {
+  background-image: url("./images/frybread_offer_border.png");
+  min-height: 400px;
+}
+
+/* Fifth image (take a look) */
+.bgimg-6 {
+  background-image: url("./images/grocery_store.jpg");
+  min-height: 400px;
+}
+
+
+
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6 {
     background-attachment: scroll;
     min-height: 400px;
   }
@@ -196,14 +217,14 @@ clear: both;
 </div>
 
 
-<!-- Second Parallax Image with Game Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min" id="game">
+<!-- Third Parallax Image with Game Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="game">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">THE GAME</span>
   </div>
 </div>
 
-<!-- Container (Pedagogy Section) -->
+<!-- Container (Game Section) -->
 <div class="w3-content w3-container w3-padding-64">
   <h3 class="w3-center">HOW THE GAME WORKS</h3>
   <br>
@@ -243,8 +264,8 @@ clear: both;
 
 
 
-<!-- Second Parallax Image with Pedagogy Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min" id="pedagogy">
+<!-- Fourth Parallax Image with Pedagogy Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min" id="pedagogy">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">PEDAGOGY</span>
   </div>
@@ -312,8 +333,8 @@ clear: both;
   </p>
 </div>
 
-<!-- Third Parallax Image with Principles Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min" id="principles">
+<!-- Fifth Parallax Image with Principles Text -->
+<div class="bgimg-5 w3-display-container w3-opacity-min" id="principles">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">PROJECT PRINCIPLES</span>
   </div>
@@ -393,7 +414,7 @@ clear: both;
 </div>
 
 <!-- Fourth Parallax Image with Look at it Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
+<div class="bgimg-6 w3-display-container w3-opacity-min" id="portfolio">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">ȻI·KATIN! Take a look!</span>
   </div>
@@ -684,7 +705,7 @@ clear: both;
 </div> -->
 
 <!-- Fifth Parallax Image with Contact Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min" id="contact">
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="contact">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
   </div>
