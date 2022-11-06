@@ -495,9 +495,9 @@ padding-left: 30px;
 </div>
 
 <!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+<div id="modal01" class="w3-modal w3-white" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-white w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-center w3-transparent w3-padding-64">
     <img id="img01" class="w3-image">
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
@@ -683,7 +683,7 @@ padding-left: 30px;
 <div class="w3-content w3-container w3-padding-64" id="acknowledgements">
   <br>
   <br>
-  <h3 class="w3-center">Acknowledgments</h3>
+  <h3 class="w3-center">Acknowledgements</h3>
   <br>
   <p>
   We would like to acknowledge the support of Ktunaxa elders Francis Auld and Wilfred Kenmille, who provide invaluable insights into the language and culture. We thank them for their feedback and guidance.
@@ -788,7 +788,7 @@ window.onscroll = function() {myFunction()};
 function myFunction() {
     var navbar = document.getElementById("myNavbar");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + ;
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top";
     } else {
         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
     }
