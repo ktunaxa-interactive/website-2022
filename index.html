@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ktunaxa Interactive</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="contact-form.css" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="./images/favicon_ktunaxa_interactive_website.png">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Arial", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7  {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Welcome. Full height) */
+.bgimg-1 {
+  background-image: url('./images/background_image_welcome_tent.png');
+  min-height: 100%;
+}
+
+/* Second image (goals)*/
+.bgimg-2 {
+  background-image: url("./images/Polson_downtown.jpg");
+  min-height: 400px;
+}
+
+/* Third image (the game) */
+.bgimg-3 {
+  background-image: url("./images/auntie_house_2.jpg");
+  min-height: 400px;
+}
+
+/* Fourth image (pedagogy) */
+.bgimg-4 {
+  background-image: url("./images/frybread_with_parfleche.png");
+  min-height: 400px;
+}
+
+/* Fifth image (team) */
+.bgimg-5 {
+  background-image: url("./images/frybread_offer_border.png");
+  min-height: 400px;
+}
+
+/* Sixth image (take a look) */
+.bgimg-6 {
+  background-image: url("./images/grocery_store.png");
+  min-height: 400px;
+}
+
+/* Seventh image (principles) */
+.bgimg-7 {
+  background-image: url("./images/auntie_welcome_colored.png");
+  min-height: 400px;
+}
+
+
+
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+@media only screen and (max-device-width: 1000px) {
+  .column-container,
+  .column {display: table-row;
+    width: 100%;
+  }
+}
+
+.column-container {
+  display: table;
+  width: 100%;
+}
+
+.column {
+display: table-cell;
+width: 25%;
+padding-top: 50px;
+padding-right: 30px;
+padding-bottom: 50px;
+padding-left: 30px;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.row {
+float: left;
+display: table-row;
+padding-top: 50px;
+padding-right: 30px;
+padding-bottom: 50px;
+padding-left: 30px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar" style="background-color: rgba(0,0,0,.5);">
+    <a class="w3-bar-item w3-button w3-hover-blue w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <p style="color :white; ">
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small">ABOUT THE PROJECT</a>
+    <a href="#goals" class="w3-bar-item w3-button w3-hide-small">PROJECT GOALS</a>
+    <a href="#game" class="w3-bar-item w3-button w3-hide-small">THE GAME</a>
+    <a href="#pedagogy" class="w3-bar-item w3-button w3-hide-small">PEDAGOGY</a>
+    <a href="#principles" class="w3-bar-item w3-button w3-hide-small">PROJECT PRINCIPLES</a>
+    <a href="#support" class="w3-bar-item w3-button w3-hide-small">SUPPORT & FUNDING</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small">ȻI·KATIN! (Take a look!)</a>
+    <!-- <a href="#stickers" class="w3-bar-item w3-button w3-hide-small">LANGUAGE STICKERS</a> -->
+    <a href="#team" class="w3-bar-item w3-button w3-hide-small">THE TEAM</a>
+    <a href="#acknowledgments" class="w3-bar-item w3-button w3-hide-small">ACKNOWLEDGMENTS</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    </p>
+  </div>
+
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium">
+    <p style="color :white; ">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT THE PROJECT</a>
+    <a href="#game" class="w3-bar-item w3-button" onclick="toggleFunction()">THE GAME</a>
+    <a href="#goals" class="w3-bar-item w3-button" onclick="toggleFunction()">PROJECT GOALS</a>
+    <a href="#pedagoy" class="w3-bar-item w3-button" onclick="toggleFunction()">PEDAGOGY</a>
+    <a href="#principles" class="w3-bar-item w3-button" onclick="toggleFunction()">PROJECT PRINCIPLES</a>
+    <a href="#support" class="w3-bar-item w3-button" onclick="toggleFunction()">SUPPORT & FUNDING</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">ȻI·KATIN! (Take a look!)</a>
+    <!-- <a href="#stickers" class="w3-bar-item w3-button" onclick="toggleFunction()">LANGUAGE STICKERS</a> -->
+    <a href="#team" class="w3-bar-item w3-button" onclick="toggleFunction()">THE TEAM</a>
+    <a href="#acknowledgments" class="w3-bar-item w3-button" onclick="toggleFunction()">ACKNOWLEDGMENTS</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    </p>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<!-- <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-blue w3-xlarge w3-wide w3-animate-opacity">Kin wam?! Glad you made it!<span class="w3-hide-small"></span></span>
+  </div>
+</div> -->
+
+<!-- First Parallax Image with Logo Text in the same style as the Portfolio text below -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle">
+    <div style="text-align: center;">
+    <span style="color:#fff; font-size: 50px;  background-color: rgba(0,0,0,.5);">Ki'su'k kyukyit?</span>
+    <br>
+    <br>
+    <span style="color:#fff; font-size: 25px;  background-color: rgba(0,0,0,.5);"><em>(Ktunaxa greeting, "Is it a good day?")</em></span>
+    </div>
+  </div>
+</div>
+  <!-- <div class="w3-display-middle" style="white-space:nowrap;"> -->
+  <!-- <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-padding-large w3-blue w3-text-white w3-xlarge w3-wide w3-animate-opacity">Kin wam? (<em> You have arrived?</em>) Welcome!</span>
+  </div>
+</div> -->
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+    <div style="text-align: center;">
+    <img src="./images/Ktunaxa-logo_without_website.png" width=30% alt="Ktunaxa Interactive Project Logo">
+    </div>
+  <br>
+  <h3 class="w3-center">Welcome to the Ktunaxa Interactive Language Learning project!</h3>
+  <br>
+  <!-- <p class="w3-center"><em>ABOUT THE PROJECT</em></p> -->
+  <p> <strong>This is a <span style="color:DodgerBlue ; font-size: 20px; font-weight: normal;">Ksanka</span>-led project with the goal to develop the first interactive language learning adventure game for </strong><span style="color:DodgerBlue ; font-size: 20px;">Ktunaxa</span>.
+    <br>
+    <br> <em>Imagine a comic book come to life!</em>
+    <br>
+    <div style="text-align: center;">
+    <img src="./images/comic_book_come_to_life.png" width="100%">
+    </div>
+    <br>
+    <br> <span style="color:DodgerBlue ; font-size: 20px;">Skinkuȼ ȼ Kulilu</span> <em>(Coyote and Butterfly)</em> is a <strong>make-your-own-adventure game</strong> with audio and images in which the player makes important choices that drive the story forward.
+    <br>
+    <br>The story is set on the Flathead Reservation in and around <span style="color:DodgerBlue ; font-size: 20px;">Kwat̓aq̓nuk</span> <em>(Polson)</em> and <span style="color:DodgerBlue ; font-size: 20px;">K̓upawiȼq̓nuk</span> <em>(Elmo)</em>.
+    You play a young person who just finished high school and visits their aunty for the summer, preparing to go to SKC (<em>Sanⱡanana-Ksanka-College, a fictional college in the game, based on the real-world Salish-Kootenai-College</em>).
+    <br>
+    <br><em>Then you meet Skinkuȼ and Kulilu and the adventures begin...</em>
+    <br>
+  </p>
+</div>
+
+<!-- Second Parallax Image with Game Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="goals">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PROJECT GOALS</span>
+  </div>
+</div>
+
+<!-- Container (Pedagogy Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">With this game we aim to do 3 things to support independent language learners...</h3>
+  <br>
+  <p class="w3-center">
+    <ul>
+      <li>1 ... <span style="color:DodgerBlue ; font-size: 20px;">uki</span> <em>(one)</em> ...  provide language content that is useful for everyday conversations,</li>
+      <li>2 ... <span style="color:DodgerBlue ; font-size: 20px;">'as</span> <em>(two)</em> ...  offer fun ways to practice words & phrases, and</li>
+      <li>3 ... <span style="color:DodgerBlue ; font-size: 20px;">qaⱡsa</span> <em>(three)</em> ...  embed the language content in the cultural context.</li>
+    </ul>
+  </p>
+</div>
+
+
+<!-- Third Parallax Image with Game Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="game">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">THE GAME</span>
+  </div>
+</div>
+
+<!-- Container (Game Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">HOW THE GAME WORKS</h3>
+  <br>
+  <p class="w3-center">
+
+    <div>
+      <img src="./images/how_the_game_works_example_1.png" style="width:30%; float:left;" onclick="onClick(this)" class="w3-hover-opacity" alt="Example from the game. Meeting Kulilu.">
+    </div>
+    <div>
+      <img src="./images/how_the_game_works_example_2.png" style="width:30%; float:left;" onclick="onClick(this)" class="w3-hover-opacity" alt="Example from the game. Vocabulary splash screen for frybread.">
+    </div>
+    <div>
+      <img src="./images/how_the_game_works_example_3.png" style="width:30%; float:left;" onclick="onClick(this)" class="w3-hover-opacity" alt="Example from the game. Multiple choice: What does this mean?">
+    </div>
+  </p>
+
+  <p>
+    <br><br><br><br><br><br><br><br>
+    <strong>The player moves through the game by makíng choices (multiple choice) or providing text input (text boxes).
+    <br>You can...</strong>
+    <br>
+    <br>
+    <ul>
+      <li>Talk with other characters in the game to learn about the place, make friends, and pick up language skills.</li>
+      <br>
+      <li>Unlock new words and phrases on your way.</li>
+      <br>
+      <li>Make decisions about what to say, where to go, and what to do. (<em>Score respect points for culturally appropriate choices!</em>)</li>
+      <br>
+      <li>Solve mini-puzzles to unlock new paths and important knowledge (<em>and practice your language skills in the process!</em>).</li>
+    </ul>
+    <br>
+    <br>
+    <h4 style="color:DodgerBlue;">Access the game here:</h4>
+    <p><em>(Link to the game coming soon!)</em></p>
+    <br>
+    <span><em>Note: Currently, the game is using the writing convention of the Ksanka band of the Ktunaxa tribe.
+      We are happy to add additional versions to reflect the dialect and writing systems of other Ktunaxa bands.
+      Please <a href="#contact" style="color:blue;">get in touch!</a></em></span>
+  </p>
+</div>
+
+
+
+<!-- Fourth Parallax Image with Pedagogy Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min" id="pedagogy">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PEDAGOGY</span>
+  </div>
+</div>
+
+<!-- Container (Pedagogy Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">HOW LANGUAGE LEARNING IS SUPPORTED BY THE GAME</h3>
+  <br>
+  <p class="w3-center">
+  <p>
+    <span style="color:DodgerBlue;">#game-based_learning</span>
+    <br>
+    Learners get to apply language content in <strong>simulated conversations</strong> and contexts with real-world relevance.
+    The focus lies on <strong>everyday language skills</strong>.
+    Learning happens in a <strong>fictional</strong> world, a <strong>safe space</strong> where errors are allowed while making progress towards learning goals.
+    <br>
+    <br>
+    <span style="color:DodgerBlue;">#contextualized_content</span>
+    <br>
+    Rather than memorizing isolated words from word lists, learners can practice words and phrases in the <strong>context</strong> in which they would naturally occur in <strong>everyday situations</strong>.
+    <br>
+    <br>
+    <span style="color:DodgerBlue;">#scaffolded_immersion</span>
+    <br>
+    To make sure not to overwhelm learners with too much content, the game relies on English as a <strong>shared language</strong> and introduces Ktunaxa concepts, words and phrases <strong>step by step</strong>.
+    Once a concept is introduced in Ktunaxa, it will stay in the language from then on, working towards full <strong>immersion</strong>.
+    Words and phrases are explained and often broken down into their <strong>components</strong> <em>(morphological analysis)</em> to provide a <strong>scaffold</strong> for learners to understand fully what they are learning and to support their pattern recognition.
+    <br>
+    <br>
+    <span style="color:DodgerBlue;">#spaced_repetition</span>
+    <br>
+    Ktunaxa concepts are <strong>repeated frequently and in regular intervals</strong> throughout the game, and they re-surface in various conversational situations to demonstrate the <strong>range of contexts</strong> in which a word or phrase can be used.
+    <br>
+    <br>
+    <span style="color:DodgerBlue;">#audio_visual_support</span>
+    <br>
+    The language content is supported by <strong>graphic illustrations</strong>, and <strong>audio recordings</strong> are integrated for Ktunaxa words and phrases.
+    <br>
+    <br>
+    <span style="color:DodgerBlue;">#feedback</span>
+    <br>
+    Feedback is provided to learners either <strong>explicitly</strong> by a direct comment on a conversational choice they made in the game, or <strong>implicitly</strong> by a game character's reaction to something the player chose to say.
+    <br>
+    <br>
+    <span style="color:DodgerBlue;">#learner_motivation</span>
+    <br>
+    The game motivates players with a <strong>fun mission</strong> to solve, and offers <strong>cultural guidance</strong> alongside the language practice.
+    <br>
+    <br>
+    <span style="color:DodgerBlue;">#learner_agency</span>
+    <br>
+    The game puts the learner in charge: they decide <strong>when and where</strong> they want to practice their skills, what they want to repeat and what to focus on, based on <strong>their own learning goals</strong>.
+    <br>
+    <br>
+    <span style="color:DodgerBlue;">#learning_while_designing</span>
+    <br>
+    Another great benefit of a language learning game lies in the development itself: While working on the game, language learners, speakers and teachers can team up to design the game chapters and missions.
+    During this <strong>collaboration</strong>, learners engage naturally with the language.
+    <br>
+    <br>
+    When designing the language curriculum and the learning experience for the game, learners take on a <strong>teacher's role and perspective</strong>, and explore the language content on a deeper level.
+    Our team has found that we naturally pick up on the language and its intricacies while working on the game.
+    Plus, we have a lot of fun! <span style="color:DodgerBlue ; font-size: 20px;">Ȼ̓ikan!</span><em> (Come!)</em> Join us! <a href="#contact" style="color:blue;">Get in touch</a>
+  </p>
+</div>
+
+<!-- Seventh Parallax Image with Principles Text -->
+<div class="bgimg-7 w3-display-container w3-opacity-min" id="principles">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PROJECT PRINCIPLES</span>
+  </div>
+</div>
+
+<div class="column-container">
+  <div class="column" style="background-color:DodgerBlue; color:white; padding-left: 30px;">
+    <h3>CO-DESIGN</h3><br>
+    <p>The project team consists of Ktunaxa community members and their non-Ktunaxa colleagues who all bring different kinds of expertise to this project,
+        e.g. story-telling, arts & design, instructional design, youth advocacy, tech implementation etc. We meet regularly and share the decision-making for all aspects of this project,
+        including the curriculum design, story and game development, governance, engagement with learners and project promotion, etc.
+    </p>
+  </div>
+  <div class="column" style="background-color:DodgerBlue; color:white;">
+    <h3>COMMUNITY OWNERSHIP</h3><br>
+    <p>All language content and cultural heritage that we implement in the game is owned by the Ktunaxa language community. It is only made available to Ktunaxa
+        language learners for educational purposes. We work closely with the Elders Meeting in Elmo, and the Tribal Council of the Confederated Salish and Kootenai
+        Tribes to make sure the content is correct and appropriate, and can be shared with Ktunaxa language learners in the context of this game.
+    </p>
+  </div>
+  <div class="column" style="background-color:DodgerBlue; color:white;">
+    <h3>SUSTAINABLE RESOURCES</h3><br>
+    <p>The project relies on accessible open source / free software and basic formats that are long-lived to make sure the game is sustainable.
+    The project team trains their capacity to work with these tools to make updates to the content and add further chapters to the game independently.
+    We offer community-oriented workshops to introduce the tools and workflows. Reach out if you are interested in learning more!
+    </p>
+  </div>
+  <div class="column" style="background-color:DodgerBlue; color:white;">
+    <h3>EMPOWERING LEARNERS</h3><br>
+    <p>The project emphasises the learner perspective, and we aim to implement features to help learners be in charge of their own learning process,
+    such as practice mechanisms with integrated feedback, keeping track of learned content, grammatical information on demand, and a motivating learning experience
+    that learners can engage with in their own time.
+    </p>
+  </div>
+</div>
+
+    <!-- <div class="w3-row w3-center w3-blue w3-padding-16">
+      <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">CO-DESIGN</span><br>
+      The project team consists of Ktunaxa community members and their non-Ktunaxa colleagues who all bring different kinds of expertise to this project, e.g. story-telling, arts & design, instructional design, youth advocacy, tech implementation etc.
+      We meet regularly once per week and share the decision-making for all aspects of this project, including the curriculum design, story and game development, governance, engagement with learners and project promotion, etc.
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">COMMUNITY OWNERSHIP</span><br>
+      All language content and cultural heritage that we implement in the game is owned by the Ktunaxa language community. It is only made available to Ktunaxa language learners for educational purposes.
+      We work closely with the Elders Meeting in Elmo, and the Tribal Council of the Confederated Salish and Kootenai Tribes to make sure the content is correct and appropriate, and can be shared with Ktunaxa language learners in the context of this game.
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">SUSTAINABLE LEARNING RESOURCES</span><br>
+      The project relies on accessible open source / free software and basic formats that are long-lived to make sure the game is sustainable.
+      The project team trains their capacity to work with these tools to make updates to the content and add further chapters to the game independently.
+      We offer community-oriented workshops to introduce the tools and workflows. Reach out if you are interested in learning more!
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">EMPOWERING LEARNERS-</span><br>
+      The project emphasises the learner perspective, and we aim to implement features to help learners be in charge of their own learning process,
+      such as practice mechanisms with integrated feedback, keeping track of learned content, grammatical information on demand, and a motivating learning experience
+      that learners can engage with in their own time.
+    </div>
+  </div> -->
+
+  <!-- Container (Principles Section) -->
+<div class="w3-content w3-container w3-padding-64" id="support">
+  <h3 class="w3-center">SUPPORT & FUNDING</h3>
+  <br>
+  <p>
+  We work with the approval of the Tribal Council of the Confederated Salish and Kootenai Tribes. The team consults with the Elders Meeting in Elmo and fluent speakers and teachers
+  of Ktunaxa for their advice on the language and cultural content for the game.
+  <br>
+  <br>
+  The team was awarded a Native Voices Endowment grant from the <a href="https://www.endangeredlanguagefund.org/" style="color:blue;">Endangered Language Fund</a> twice, once in 2020, and again in 2022.<br><br>
+  <img src="./images/logo_endangered_language_fund.png" width=20%; alt="Endangered Language Fund Logo">
+  <br>
+  <br>
+  We are grateful for the support we receive for this project! <span style="color:DodgerBlue ; font-size: 20px;">Hu sukiⱡq̓uknaⱡa'ni!</span> <em>(We are glad / thankful!)</em>
+  </p>
+</div>
+
+<!-- Fourth Parallax Image with Look at it Text -->
+<div class="bgimg-6 w3-display-container w3-opacity-min" id="portfolio">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">ȻI·KATIN! Take a look!</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <p><span style="color:DodgerBlue ; font-size: 20px;">Ȼi·katin!</span> <em>(literally: Look at it!)</em>
+  </p>
+  <br>
+  <h3 class="w3-center" color="blue">HERE ARE A FEW SNAPSHOTS FROM THE GAME...</h3>
+  <br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="./images/example_greetings.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Example from the game: Practicing greetings.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./images/example_meeting_kulilu.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Example from the game: Meeting Kulilu and learning about the terms Ksanka vs. Ktunaxa. Note: SKC stands here for Sanⱡanana-Ksanka-College, a fictional college in the game, based on the real-world Salish-Kootenai-College.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./images/example_place_names.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Example from the game: Learning about place names.">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./images/example_vowels.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Example from the game: Kulilu explains Ktunaxa vowels.">
+    </div>
+    <p style="text-align: left;">
+    <em>Tip: Click on the images to make them bigger!</em>
+  </div>
+  <br>
+  <br>
+
+  <h3 class="w3-center" color="blue">AND HERE IS OUR PROJECT INFO POSTER...</h3>
+  <p>The team presented this at the <em>International Conference on Language Documentation & Conservation (ICLDC)</em> in 2021.</p>
+  <br>
+  <iframe src="./images/project_poster_ICLDC_2021.pdf" width="90%" height="500px">
+   </iframe>
+  <br>
+  <br>
+  <br>
+  
+  <h3 class="w3-center" color="blue">AND...LANGUAGE STICKERS!!!</h3>
+    <p>
+    The awesome game art by our in-house illustrator Rich Brisbois inspired us to create a series of Ktunaxa language stickers...
+    </p>
+  <div class="w3-row-padding w3-center w3-section">
+    <p style="text-align: left;">
+    <em>Tip: Click on the images for more info!</em>
+    <div class="w3-col m3 w3-center">
+      <img src="./images/got_frybread_sticker_image_glottal_stop_marker_fixed.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Do you know the advertising slogan 'Got milk?'
+      Here is our Ktunaxa version: Kin ha't kⱡuk̓muʾⱡ means 'Got frybread?' (Literally: Do you have frybread?)">
+    </div>
+
+    <div class="w3-col m3 w3-center">
+      <img src="./images/bumper_sticker.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="This is our bumper sticker. Hu susaxi means 'I'm on my way.'">
+    </div>
+  </div>
+
+  <div>
+    <p>
+    You would like a sticker? Or, you have an idea for a sticker? <span style="color:DodgerBlue ; font-size: 20px;">Hu ȼⱡakiⱡnaⱡaʾni!</span> <em>(We like it!)</em>
+    <br>
+    <br>
+    We'd love to hear about it! <a href="#contact" style="color:blue;">Get in touch</a>
+    </p>
+  </div>
+  <br>
+
+    <!-- <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button> -->
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-white" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-white w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Second Parallax Image with Pedagogy Text -->
+<!-- <div class="bgimg-2 w3-display-container w3-opacity-min" id="stickers">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">STICKERS!</span>
+  </div>
+</div> -->
+
+<!-- Container (Pedagogy Section) -->
+<!-- <div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">KTUNAXA LANGUAGE STICKERS</h3>
+  <br>
+  <p class="w3-center">
+  <p>
+
+    <br>
+    <br>
+    Here is our bumper sticker.
+    <br>
+    <em>Hu susaxi. I'm on my way.</em>
+  </p>
+  <br>
+  <div>
+    <img src="./images/bumper_sticker.png" style="width:25%" onclick="onClick(this)" class="w3-hover-opacity" alt="Ktunaxa bumper sticker. 'Hu susaxi' means 'I'm on my way.'">
+  </div>
+  <br>
+  <p>
+    Do you know the advertising slogan "Got milk?". Here is our Ktunaxa version.
+    <br>
+    <em>Kin h'at kⱡuk̓muʾⱡ? Got frybread? (Literally: Do you have frybread?)</em>
+  </p>
+  <br>
+  <div>
+    <img src="./images/frybread_sticker.png" style="width:25%" onclick="onClick(this)" class="w3-hover-opacity" alt="Ktunaxa language sticker. 'Kin h'at kⱡuk̓muʾⱡ?' literally means 'Do you have frybread?">
+  </div>
+  <br>
+  <p>
+    You'd like a sticker, or you have a great ideas for a sticker design? <a href="#contact">Get in touch!</a>
+  </p>
+</div> -->
+
+<!-- Fifth Parallax Image with Team Text -->
+<div class="bgimg-5 w3-display-container w3-opacity-min" id="team">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">THE TEAM</span>
+  </div>
+</div>
+
+<!-- <div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">We are a colorful mix of people: members from the Ksanka band of the Ktunaxa Tribe and  affiliates.</h3>
+</div> -->
+
+<!-- <div class="w3-row">-->
+    <!--<div class="w3-col m6 w3-center w3-padding-large">
+    <p><b><i class="fa fa-user w3-margin-right"></i>OUR TEAM</b></p><br> -->
+    <!-- <img src='./images/team.png') class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Team picture" width="50%" height="50%">
+  </div> -->
+
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <br>
+      <br>
+      <br>
+      <img src="./images/liz.png" style="width:25%" alt="Photo of Liz.">
+      <p><strong>Liz</strong>
+      <br>
+      <span style="color:DodgerBlue;">ʾAǂiȼkiǂʾis kaq̓ǂiǂinquwa</span>
+      <br>
+      <em>(Hawk's sister)</em>
+      <br>
+      <em>Ksanka social worker & storyteller</em>
+      <br>
+      <br>
+      </p>
+    </div>
+
+    <div class="w3-col m3">
+      <br>
+      <br>
+      <br>
+      <img src="./images/randell.png" style="width:25%" alt="Photo of Randell.">
+      <p><strong>Randell</strong>
+      <br>
+      <span style="color:DodgerBlue;">Kanⱡukpqa niⱡsik</span>
+      <br>
+      <em>(Running bull)</em>
+      <br>
+      <em>Ksanka language teacher</em>
+      <br>
+      <br>
+      </p>
+    </div>
+
+    <div class="w3-col m3">
+      <br>
+      <br>
+      <br>
+      <img src="./images/kayla.png" style="width:25%" alt="Photo of Kayla.">
+      <p><strong>Kayla</strong>
+      <br>
+      <em>Ksanka social activist & burlesque artist</em>
+      <br>
+      <br>
+      </p>
+    </div>
+
+    <div class="w3-col m3">
+      <br>
+      <br>
+      <br>
+      <img src="./images/bryan.png" style="width:25%" alt="Photo of Bryan.">
+      <p><strong>Bryan</strong>
+      <br>
+      <span style="color:DodgerBlue;">Kamak̓ȼi ‘akiⱡnuhus</span>
+      <br>
+      <em>(Yellow star)</em>
+      <br>
+      <em>Ksanka law student & boxing coach</em>
+      <br>
+      <br>
+      </p>
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="./images/richard.png" style="width:25%" alt="Photo of Richard.">
+      <p><strong>Richard</strong>
+      <br>
+      <em>Spokane artist & illustrator</em>
+      <br>
+      <br>
+      </p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./images/andrew.png" style="width:25%" alt="Photo of Andrew.">
+      <p><strong>Andrew</strong>
+      <br>
+      <em>West Coast graphic designer</em>
+      <br>
+      <br>
+      </p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./images/kathrin.png" style="width:25%" alt="Photo of Kathrin.">
+      <p><strong>Kathrin</strong>
+      <br>
+      <em>German linguist & language instruction designer</em>
+      <br>
+      <br>
+      </p>
+    </div>
+
+  </div>
+
+<div class="w3-content w3-container w3-padding-64">
+  <div class="w3-padding-large">
+    <p>
+    The core team first came together during the Ksanka language workshop at the <span style="color:DodgerBlue ; font-size: 20px;">Kwat̓aq̓nuk</span> <em>(Polson)</em> Resort & Casino in 2019 over a shared passion for creative learning methods.
+    Since then we have been meeting online on a weekly basis. Three active members have joined in the meantime, and we are always welcoming new members to the group. <span style="color:DodgerBlue ; font-size: 20px;">Ȼ̓ikan!</span> <em>(Come!)</em> Everybody is welcome!
+    <br>
+    <br>
+  </div>
+</div>
+
+<div class="column-container">
+  <div class="row" style="height: table; width: 100%; background-color:DodgerBlue; color:white; padding: 5px;">
+    <h3 class="w3-center">JOIN US!</h3>
+    <p class="w3-center"> If you'd like to get involved, <a href="#contact" style="color:blue;">get in touch!</a> We'd love to hear from you!
+    </p>
+    <br>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="acknowledgments">
+  <br>
+  <br>
+  <h3 class="w3-center">Acknowledgments</h3>
+  <br>
+  <p>
+  We would like to acknowledge the support of Ktunaxa elders Francis Auld and Wilfred Kenmille, who provide invaluable insights into the language and culture. We thank them for their feedback and guidance.
+  We also would like to acknowledge early team members Grey Johnson, [...], and [...] and honor their support and contributions while kicking off this project.
+  And many thanks to Daan van Esch for his help adding JavaScript to our game software template!
+  <br>
+  <br>
+  <br><span style="color:DodgerBlue ; font-size: 20px;">Hu sukiⱡq̓uknaⱡa'ni!</span> <em>(We are glad / thankful!)</em>
+</div>
+
+  <!-- Hide this text on small devices -->
+  <!-- <div class="w3-col m6 w3-hide-small w3-padding-large">
+    <p>We are a colorful group with members from the Ksanka band of the Ktunaxa tribe, a language activist, a social activist & burlesque artist, a storyteller & social worker, a law student & boxing coach, and a Spokane artist & illustrator, a German language instruction designer, and a graphics interface designer from Oregon. Initially, a core team of 4 first came together in 2019 over a shared passion for creative learning methods, and since then they have been meeting online on a weekly basis. 3 more members joined meanwhile, and we are actively recruiting and welcoming more members to the group.</p>
+  </div>
+</div> -->
+
+<!-- <p class="w3-large w3-center w3-padding-16">Principles</p>
+<p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+<div class="w3-light-grey">
+  <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+</div>
+<p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+<div class="w3-light-grey">
+  <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+</div>
+<p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+<div class="w3-light-grey">
+  <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+</div>
+</div> -->
+
+<!-- Fifth Parallax Image with Contact Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="contact">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">YOU CAN FIND US HERE</h3>
+  <p class="w3-center"><em>We'd love to hear from you!</em>
+  <br><strong>Follow us on </strong><a href="https://www.facebook.com/people/Ktunaxa-Interactive/100068607432188/" target="_blank" rel="noopener noreferrer" class="fa fa-facebook-official w3-hover-opacity" style="color:blue; background-color:white; font-size:30px;"></a>
+  </p>
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="./images/ksanka_placenames_map.png" class="w3-image w3-round" style="width:100%">
+    </div>
+      <div class="w3-col m8 w3-panel">
+        <div class="w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <span style="color:DodgerBlue ; font-size: 20px;">K̓upawiȼq̓nuk</span> <em>(Elmo, MT; literally: Big bay)</em><br>
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <span style="color:DodgerBlue ; font-size: 20px;">Nisqat̓i</span> <em>(Ronan, MT; literally: Spring of water of the ground)</em><br>
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <span style="color:DodgerBlue ; font-size: 20px;">Kwat̓aq̓nuk</span> <em>(Polson, MT; literally: Where the water leaves the lake)</em><br>
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <span style="color:DodgerBlue ; font-size: 20px;">Tuhuⱡnana</span> <em>(Missoula, MT; literally: Little bull trout)</em><br>
+
+            <!-- <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+            <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br> -->
+        </div>
+      </div>
+      <br>
+    <div>
+      <p>If you'd like to get involved, share feedback, or meet us for a cup of  <span style="color:DodgerBlue ; font-size: 20px;">ka·pi</span> <i class="fa fa-coffee"></i>, leave us a note:</p>
+    </div>
+  </div>
+
+      <!-- <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form> -->
+
+  <div class="fcf-body" style="color: #777">
+    <div id="fcf-form">
+    <h3 class="fcf-h3">Contact us</h3>
+
+      <form id="fcf-form-id" name="contactForm" class="fcf-form-class" method="post" action="contact-form-process.php">
+        <div class="fcf-form-group">
+            <label for="Name" class="fcf-label">Your name</label>
+            <div class="fcf-input-group">
+                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Email" class="fcf-label">Your email address</label>
+            <div class="fcf-input-group">
+                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Message" class="fcf-label">Your message</label>
+            <div class="fcf-input-group">
+                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/people/Ktunaxa-Interactive/100068607432188/"></a>
+    <!-- <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <div class="fcf-credit" id="fcf-credit">
+  Simple HTML email form provided by <a href="https://www.majesticform.com" target="_blank">MajesticForm</a>
+  </div>
+</footer>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
