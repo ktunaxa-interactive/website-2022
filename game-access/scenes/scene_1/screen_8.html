@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coyote & Butterfly</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+</style>
+
+<link rel="stylesheet" href="../../styles/styles.css" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
+
+<script>
+//         window.onload = function player_name() {
+//    var getInput = prompt("Hey type something here: ");
+//    localStorage.setItem("storagePlayerName",getInput);
+// }
+  function playerName() {
+    var getInput = document.getElementById("userInput").value;
+    localStorage.setItem("storagePlayerName",getInput);
+    // window.alert('hello from inside the function and also Daan is the best')
+  }
+</script>
+
+<script>
+var pronunciation = new Audio();
+pronunciation.src = "../../audio/scene_1/Randell_waha.m4a";
+</script>
+
+<script>
+var pronunciation_2 = new Audio();
+pronunciation_2.src = "../../audio/scene_1/Randell_Kulilu.m4a";
+</script>
+
+</head>
+<body>
+  <div class="body-container">
+    <div class="content-container">
+      <div class="item1"><img class="square" src="../../images/kulilu.png" alt="On the bus."></div>
+      <div class="item2"><h2><em>Haha, you got that right... <a href="#" class="ksankaText" onmousedown="pronunciation.play()">Waha</a> means no. By the way, my name is <a href="#" class="ksankaText" onmousedown="pronunciation_2.play()">Kulilu</a>. That means butterfly. What's your name? </em></h2></div>
+
+      <!-- <form id="form" onsubmit="return false;">
+         <input type="text" id="userInput" />
+         <input class="buttonChoices" type="submit" value="Submit name" onclick="player_name();" onclick="window.location.href='./screen_9.html" />
+       </form> -->
+<!-- <script>
+function player_name() {
+         var input = document.getElementById("userInput").value;
+         alert(input);
+     }
+</script> -->
+      <div class="item3">
+        <!-- <form id="form" onsubmit="return playerName(); the problem is: usually the browser expects something to be submitted to a server from a form,
+        if you do have the submit action taking place, but no pointer to a server, the browser simply refreshes the page, so take the submit actions out">
+           <input type="text" id="userInput" />
+           <input class="buttonPronunciations" type="submit" value="submit" onclick="console.log('whatever'); playerName(); window.location.href='./screen_9.html'" />
+         </form> -->
+
+            <input type="text" id="userInput" />
+            <button class="buttonChoices" onclick="playerName(); window.location.href='./screen_9.html'">Nice to meet you!</button>
+
+      </div>
+      <!-- <div class="item4">
+        <button class="buttonChoices" onclick="window.location.href='./page_2b.html';">Waha</button>
+      </div>
+      <div class="item5">
+        <button class="buttonChoices" onclick="window.location.href='./page_2c.html';">What's kⱡuk̓mu’ⱡ?</button>
+      </div> -->
+      <!-- <div class="item6">
+        <audio controls>
+          <source src="./Rick.m4a" type="audio/mp4">
+          <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+      </div> -->
+      <div class="item7">
+        <!-- <button class="buttonMenu">Notebook</button><button class="buttonMenu">Backpack</button> -->
+        <button class="backButton" onclick="goBack()">go back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

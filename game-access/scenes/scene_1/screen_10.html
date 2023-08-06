@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coyote & Butterfly</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+</style>
+
+<link rel="stylesheet" href="../../styles/styles.css" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
+
+<script>
+var pronunciation = new Audio();
+pronunciation.src = "../../audio/scene_1/Randell_kwat̓aq̓nuk.m4a";
+
+var pronunciation_2 = new Audio();
+pronunciation_2.src = "../../audio/scene_1/Randell_ʾa·kuq̓nuk.m4a";
+
+</script>
+
+</head>
+<body>
+  <div class="body-container">
+    <div class="content-container">
+      <div class="item1"><img class="square" src="../../images/ksanka_placenames_map.png" alt="Map of Ksanka places."></div>
+      <div class="item2"><h2><em><span style="color:darkgrey">[Kulilu speaking]</span><br>
+        It's up there by the lake, see? The Ksanka name for Polson is <a href="#" class="ksankaText" onmousedown="pronunciation.play()">Kwat̓aq̓nuk</a>,
+        that means literally 'where the water leaves the lake'... <a href="#" class="ksankaText" onmousedown="pronunciation_2.play()">ʾa·kuq̓nuk</a> means lake. See how the q̓nuk part is in both words?
+      </em></h2>
+      </div>
+      <div class="item3">
+        <button class="buttonChoices" onclick="window.location.href='./screen_11.html';">Cool, thanks! That's good to know. I guess I need to learn all of these, whew... </button>
+      </div>
+      <!-- <div class="item4">
+        <button class="buttonChoices" onclick="window.location.href='./page_2b.html';">Waha</button>
+      </div>
+      <div class="item5">
+        <button class="buttonChoices" onclick="window.location.href='./page_2c.html';">What's kⱡuk̓mu’ⱡ?</button>
+      </div> -->
+      <!-- <div class="item6">
+        <audio controls>
+          <source src="./Rick.m4a" type="audio/mp4">
+          <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+      </div> -->
+      <div class="item7">
+        <!-- <button class="buttonMenu">Notebook</button><button class="buttonMenu">Backpack</button> -->
+        <button class="backButton" onclick="goBack()">go back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

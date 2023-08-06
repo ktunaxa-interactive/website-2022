@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coyote & Butterfly</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+</style>
+
+<link rel="stylesheet" href="../../styles/styles.css" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
+
+<script>
+var pronunciation = new Audio();
+pronunciation.src = "../../audio/scene_1/Randell_ʾa·kiȼqa.m4a";
+</script>
+
+<script>
+var pronunciation_2 = new Audio();
+pronunciation_2.src = "../../audio/scene_1/Randell_k̓upawiȼq̓nuk.m4a";
+</script>
+
+<script>
+var pronunciation_3 = new Audio();
+pronunciation_3.src = "../../audio/scene_1/Randell_k̓upawiȼq̓nuknana.m4a";
+</script>
+
+<script>
+var pronunciation_4 = new Audio();
+pronunciation_4.src = "../../audio/scene_1/Randell_k̓utmiʾk.m4a";
+</script>
+
+<script>
+var pronunciation_5 = new Audio();
+pronunciation_5.src = "../../audio/scene_1/Randell_kwat̓aq̓nuk.m4a";
+</script>
+
+<script>
+var pronunciation_6 = new Audio();
+pronunciation_6.src = "../../audio/scene_1/Randell_sanⱡanana.m4a";
+</script>
+
+<script>
+var pronunciation_7 = new Audio();
+pronunciation_7.src = "../../audio/scene_1/Randell_niskat̓i.m4a";
+</script>
+
+<script>
+var pronunciation_8 = new Audio();
+pronunciation_8.src = "../../audio/scene_1/Randell_ʾa·kikqⱡaⱡaⱡuk̓pⱡiʾit.m4a";
+</script>
+
+<script>
+var pronunciation_9 = new Audio();
+pronunciation_9.src = "../../audio/scene_1/Randell_ya·kiⱡ_pa·ȼkniⱡki.m4a";
+</script>
+
+<script>
+var pronunciation_10 = new Audio();
+pronunciation_10.src = "../../audio/scene_1/Randell_tuhuⱡnana.m4a";
+</script>
+
+<script>
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('expandableImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+</script>
+
+</head>
+<body>
+  <div class="body-container">
+    <div class="content-container">
+      <div class="item1"><img class="square" src="../../images/ksanka_placenames_map.png" alt="On the bus."></div>
+      <div class="item2"><h2><em><span style="color:darkgrey">[Kulilu speaking]</span><br>
+        Here, I can pronounce these for you if you like...</em></h2></div>
+      <div class="item3">
+          <span><a href="#" class="ksankaTextBig" onmousedown="pronunciation.play()">ʾa·kiȼqa</a> "fish trap"</span>
+          <br>
+          <br>
+          <span><a href="#" class="ksankaTextBig" onmousedown="pronunciation_2.play()">k̓upawiȼq̓nuk</a> "bay"</span>
+          <br>
+          <br>
+          <span><a href="#" class="ksankaTextBig" onmousedown="pronunciation_3.play()">k̓upawiȼq̓nuknana</a> "little bay"</span>
+          <br>
+          <br>
+          <span><a href="#" class="ksankaTextBig" onmousedown="pronunciation_4.play()">k̓utmiʾk</a> "hot springs"</span>
+          <br>
+          <br>
+          <span><a href="#" class="ksankaTextBig" onmousedown="pronunciation_5.play()">kwat̓aq̓nuk</a> "where the water leaves the lake"</span>
+          <br>
+          <br>
+          <span><a href="#" class="ksankaTextBig" onmousedown="pronunciation_6.play()">sanⱡanana</a> "little blackfoot"</span>
+          <br>
+          <br>
+          <span><a href="#" class="ksankaTextBig" onmousedown="pronunciation_7.play()">nisqat̓i</a> "cold water spring"</span>
+          <br>
+          <br>
+          <span><a href="#" class="ksankaTextBig" onmousedown="pronunciation_8.play()">ʾa·kikqⱡaⱡaⱡuk̓pⱡiʾit</a>"place where plateau or basin meets the mountains"</span>
+          <br>
+          <br>
+          <span><a href="#" class="ksankaTextBig" onmousedown="pronunciation_9.play()">ya·kiⱡ pa·ȼkniⱡki</a> "place where they distribute things"</span>
+          <br>
+          <br>
+          <span><a href="#" class="ksankaTextBig" onmousedown="pronunciation_10.play()">tuhuⱡnana</a> "little bulltrout"</span>
+        </ls>
+        <br>
+      <div class="item2"><h2><em>So, you ready for a little quiz, haha... Where are you going again?</em></h2></div>
+      </div>
+      <div class="item4">
+        <button class="buttonChoices" style="font: Arial" onclick="window.location.href='./screen_11_extra_quiz_1.html';">k̓upawiȼq̓nuk ("bay")</button>
+        <button class="buttonChoices" onclick="window.location.href='./screen_11_extra_quiz_2.html';">kwat̓aq̓nuk ("where the water leaves the lake")</button>
+        <button class="buttonChoices" onclick="window.location.href='./screen_11_extra_quiz_1.html';">k̓utmiʾk ("hot springs")</button>
+      </div>
+      <!-- <div class="item5">
+        <button class="buttonChoices" onclick="window.location.href='./page_2c.html';">What's kⱡuk̓mu’ⱡ?</button>
+      </div> -->
+      <!-- <div class="item6">
+        <audio controls>
+          <source src="./Rick.m4a" type="audio/mp4">
+          <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+      </div> -->
+      <div class="item7">
+        <!-- <button class="buttonMenu">Notebook</button><button class="buttonMenu">Backpack</button> -->
+        <button class="backButton" onclick="goBack()">go back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
