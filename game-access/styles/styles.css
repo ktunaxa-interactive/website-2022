@@ -551,10 +551,10 @@ table {
 
 .backButton {
   /* background-color: #7FD9FE; original ;  #BF4556 nice pink!blue ;  #BF4556 nice pink!*/
-  background-image: url(../images/hooves.PNG);
+  background-image: url(../images/back_arrow.png);
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-size: contain; /* Resize the background image to cover the entire container */
   background-color: #D46633;
   border: 1px solid #D46633;
   border-radius: 12px;
