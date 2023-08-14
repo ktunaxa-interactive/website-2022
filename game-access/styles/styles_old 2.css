@@ -1,0 +1,333 @@
+body {
+
+  font-family: "Raleway", sans-serif;
+  background-color: #7FD9FE;
+  background-image: url("background_diamonds_waterblue.jpg");
+  margin: 0;
+  }
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+h1 {
+  color: #122533;
+  font-family: verdana;
+  font-size: 300%;
+  padding: 10px;
+  margin: 20px;
+}
+
+h2 {
+  color: black;
+  font-family: Arial;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 150%;
+  padding: 10px;
+  margin: 20px;
+}
+
+h3 {
+  color: black;
+  font-family: Arial;
+  font-size: 100%;
+  padding: 5px;
+  margin:4px 2px;
+}
+
+p {
+  color: black;
+  font-size: 90%;
+  border: none;
+  padding: 5px;
+  margin: 4px 2px;
+}
+
+.ksankaText{
+  color: #D46633;
+}
+
+/* a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+a:hover, a:active {
+  background-color: red;
+} */
+
+.square{
+    object-fit: contain;
+    -o-object-fit: contain;
+    max-width: 50vh;
+    max-height: 50vh;
+}
+.item1 {
+  grid-area: image;
+  background-color: transparent;
+  text-align: left;
+}
+.item2 {
+  grid-area: textspace;
+  /* background-color: #fcf483; bright yellow*/
+  /* background-color: #F6E27F; golden beige*/
+  /* background-color: #FDFEFC; original white */
+  /*background-color: #2E9DFF;*/
+  background-color: transparent;
+  align-items: stretch;
+}
+.item3 {
+  grid-area: choice1;
+  /* background-color: #FDFEFC; */
+  /* background-color: #9BBEC7; */
+  background-color: transparent;
+ }
+.item4 {
+  grid-area: choice2;
+  background-color: transparent;
+}
+.item5 {
+  grid-area: choice3;
+background-color: transparent;
+}
+.item6 {
+  grid-area: audiospace;
+  background-color: transparent;
+}
+.item7 {
+  grid-area: buttonspace;
+  background-color: transparent;
+}
+.item8 {
+  grid-area: header;
+}
+.item9 {
+  grid-area: footer;
+}
+
+.body-container {
+  display: grid;
+  width: auto;
+  max-height: 50vh;
+  grid-template-columns: 15fr 1fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas:
+    "headlineContainer"
+    "contentContainer"
+    "buttonContainer";
+}
+
+.headline-container{
+  grid-area: headlineContainer;
+}
+.content-container {
+  grid-area: contentContainer;
+  display: grid;
+
+  grid-template-columns: auto;
+  grid-template-rows: auto max-content max-content max-content max-content;
+  grid-template-areas:
+    "image image textspace textspace"
+    "image image textspace textspace"
+    "image image choice1 choice1"
+    "image image choice2 choice2"
+    "audiospace buttonspace choice3 choice3";
+
+  grid-gap: 10px;
+  /* background-color: #7FD9FE; */
+  /*background-color: #FFE573; */
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+.button-container {
+  grid-area: buttonContainer;
+  display: grid;
+
+  grid-template-columns:auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "button";
+
+  grid-gap: 10px;
+  padding: 20px;
+  margin: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.buttonStart {
+  /* background-color: #7FD9FE; original blue */
+  background-color: #DBD563;
+  border:
+  border-color: #80DBFF;
+  margin: 5px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 75%;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.buttonMenu {
+  /* background-color: #7FD9FE; original ;  #BF4556 nice pink!blue ;  #BF4556 nice pink!*/
+  background-color: #D46633;
+  border: none;
+  color: white;
+  margin: 5px;
+  padding: 15px 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 65%;
+  font-weight: bolder;
+  display: inline-block;
+}
+
+.backButton {
+  /* background-color: #7FD9FE; original ;  #BF4556 nice pink!blue ;  #BF4556 nice pink!*/
+  background-color: #D46633;
+  border: none;
+  color: white;
+  margin: 5px;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 65%;
+  font-weight: bolder;
+  display: inline-block;
+}
+
+.buttonChoices {
+  width: 100%;
+  background-color: white;
+  border: none;
+  margin: none;
+  color: #1456c7;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  font: Arial;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+
+.rectangle {
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  }
+
+
+.menu_button {
+  background-color: orange;
+  border: none;
+  color: black;
+  width: 150px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.choice_button {
+  background-color: white;
+  border: 4px solid orange;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 130%;
+  margin: 4px 2px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #fff099;
+  padding: 50px;
+  max-width: 50%;
+  margin: auto;
+}
+
+@media only screen
+  and (min-width: 1000px)
+  and (orientation: landscape){
+    .content-container {width: 1020px;
+    }
+}
+
+@media only screen
+and (max-width: 750px){
+  .content-container {
+
+    grid-template-columns:auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "image image"
+    "image image"
+    "textspace textspace"
+    "audiospace audiospace"
+    "choice1 choice1"
+    "choice2 choice2"
+    "choice3 choice3"
+    "buttonspace buttonspace";
+  }
+  .headline-container{
+    max-width: 500px;
+  }
+  .square{
+    object-fit: cover;
+    -o-object-fit: cover;
+    max-width: 375px;
+    max-height:85%;
+}
+
+}
+
+
+.titlePageContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
+  align-items: center;
+  justify-items: center;
+}
+
+.centerthis {
+  align-self: center;
+  justify-self: center;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 50vh solid transparent;
+    border-right: 50vh solid transparent;
+    border-top: 30px solid green;
+}
+
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50vh solid transparent;
+    border-right: 50vh solid transparent;
+    border-bottom: 30px solid green;
+}
